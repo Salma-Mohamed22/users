@@ -1,0 +1,23 @@
+.navbar {
+    background-color: rgb(30, 209, 173);
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    outline: 0px;
+    border: 0px;
+}
+.navbar-brand i {
+    font-size: 1.1rem;
+    color: #fff;
+}
+.navbar-brand i::before {
+    font-weight: 800 !important;
+}
+.nav-title {
+    font-size: 1.5rem;
+}

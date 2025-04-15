@@ -1,0 +1,35 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card {
+    border: 1px solid rgba(245, 243, 243, 0.804);
+}
+.card-header {
+    background-color: #f5f3f377;
+    border-bottom-color: rgba(245, 243, 243, 0.804);
+}
+.card-title {
+    color: rgba(78, 78, 78, 0.923);
+    font-size: 1.5rem;
+}
+.card-body {
+    display: grid;
+    grid-template-columns: minmax(30%, max-content) 1fr;
+    gap: 0px 30px;
+}
+
+.card-body-title {
+    font-size: 1.3rem;
+}
+.card-body-desc {
+    font-size: 1rem;
+    color: rgba(109, 107, 107, 0.923);
+}
+
+@media (max-width: 600px) {
+    .card-body {
+      grid-template-columns: 1fr;
+    }
+}

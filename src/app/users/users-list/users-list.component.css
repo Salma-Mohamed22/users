@@ -1,0 +1,36 @@
+
+thead th {
+    background-color: #f5f3f3bd;
+    color: rgba(78, 78, 78, 0.923);
+    padding-block: 15px;
+    white-space: nowrap;
+}
+th , td {
+    padding-inline: 15px;
+}
+tbody tr:hover td , tbody tr:hover th {
+    background-color: rgba(236, 236, 236, 0.159);
+}
+.searchbar {
+    position: relative;  
+}
+.bi-search {
+    position:absolute;
+    top: 50%;
+    right: 1rem;
+    translate: 0% -50%;
+    color:var(--primary-color);
+}
+input {
+    border: 0px;
+    background-color: #f5f3f3bd;
+    border-radius: 0.5rem;
+    padding: .5rem 1rem;
+    outline: none;
+    width:100%;
+    transition: all 0.3s ease-in-out;
+}
+.table-rounded {
+    border-radius: .5rem;
+}
+

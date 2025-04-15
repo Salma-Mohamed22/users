@@ -1,0 +1,44 @@
+<div class="m-3 searchbar col-sm-12 col-md-4 col-lg-3">
+    <input
+  type="text"
+  placeholder="Search by name or email"
+  [(ngModel)]="searchTerm"
+/>
+<i class="bi bi-search"></i>
+</div>
+
+<div *ngIf="isLoading" class="d-flex justify-content-center align-items-center mt-5">
+    <div class="loader"></div>
+</div>
+
+<div *ngIf="error">{{error}}</div>
+
+<div class="mx-3 table-rounded table-responsive">
+    <table class="table " *ngIf="!isLoading && filteredUsers.length">
+        <thead class="align-middle">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Company Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="align-middle">
+          <tr *ngFor="let user of filteredUsers">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.company?.name}}</td>
+            <td>
+              <button class="btn primary_btn" (click)="goToDetails(user.id)">View Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
+<div *ngIf="!isLoading && !filteredUsers.length">
+  <p>No users found.</p>
+</div>

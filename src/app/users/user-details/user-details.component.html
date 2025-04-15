@@ -1,0 +1,21 @@
+
+<div *ngIf="isLoading" class="d-flex justify-content-center align-items-center mt-5">
+    <div class="loader"></div>
+</div>
+
+<div *ngIf="error">{{ error }}</div>
+
+<div class="cards m-3" *ngIf="user">
+    <div class="card" *ngFor="let user of userSections">
+        <div class="card-header">
+            <h2 class="card-title">{{user.title}}</h2>
+        </div>
+        <div class="card-body">
+            <div class="card-body-content"  *ngFor="let field of user.fields">
+               <h3 class="card-body-title">{{field.label}}</h3>
+               <p class="card-body-desc">{{field.key }}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
